@@ -184,7 +184,7 @@ module Tree
     # @return [String] A string representation of the node.
     def to_s
       "Node Name: #{@name}" +
-        " Content: " + (@content || "<Empty>") +
+        " Content: " + (@content.to_s || "<Empty>") +
         " Parent: " + (is_root?()  ? "<None>" : @parent.name) +
         " Children: #{@children.length}" +
         " Total Nodes: #{size()}"
